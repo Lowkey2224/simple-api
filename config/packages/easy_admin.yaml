@@ -9,3 +9,4 @@ easy_admin:
         date:     'Y-m-d'
         time:     'H:i'
         datetime: 'Y-m-d H:i:s'
+    site_name: 'ACME <em style="font-size: 80%;">Megacorp.</em>'
