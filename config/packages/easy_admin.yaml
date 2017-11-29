@@ -5,3 +5,7 @@ easy_admin:
         - App\Entity\Role
 #        - App\Entity\Category
 #        - App\Entity\User
+    formats:
+        date:     'Y-m-d'
+        time:     'H:i'
+        datetime: 'Y-m-d H:i:s'

@@ -2,10 +2,13 @@
 
 namespace App\Entity;
 
+use ApiPlatform\Core\Annotation\ApiResource;
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\RoleRepository")
+ * @ApiResource()
  */
 class Role
 {
@@ -21,6 +24,12 @@ class Role
      * @ORM\Column(type="string")
      */
     private $name;
+
+    /**
+     * @var ArrayCollection|Person[]
+     * @ORM\ManyToMany(targetEntity="App\Entity\Person", mappedBy="roles")
+     */
+    private $persons;
 
     /**
      * @return mixed
@@ -58,5 +67,28 @@ class Role
         return $this;
     }
 
+    /**
+     * @return Person[]|ArrayCollection
+     */
+    public function getPersons()
+    {
+        return $this->persons;
+    }
+
+    /**
+     * @param Person[]|ArrayCollection $persons
+     * @return Role
+     */
+    public function setPersons($persons)
+    {
+        $this->persons = $persons;
+        return $this;
+    }
+
+    public function addPerson(Person $person)
+    {
+        $this->persons->add($person);
+        return $this;
+    }
 
 }
