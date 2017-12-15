@@ -4,16 +4,19 @@ namespace App\Controller;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpKernel\Exception\HttpException;
 
 class DefaultController extends AbstractController
 {
     /**
-     * @Route("/default", name="default")
+     * @Route("/api/login2", name="default")
      */
     public function index()
     {
-        // replace this line with your own code!
-        return $this->render('@Maker/demoPage.html.twig', [ 'path' => str_replace($this->getParameter('kernel.project_dir').'/', '', __FILE__) ]);
+        $message = \sprintf(
+            'You need to send JSON body to obtain token eg. %s',
+            json_encode(['username' => 'username', 'password' => 'password'])
+        );
+        throw new HttpException(400, $message);
     }
 }

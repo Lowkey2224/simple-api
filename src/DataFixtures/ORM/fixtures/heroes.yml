@@ -1,0 +1,48 @@
+App\Entity\Person:
+    hero1:
+        name: 'Mr. Nice'
+        dateOfBirth: '<dateTime()>'
+        email: '<email()>'
+    hero2:
+        name: 'Narco'
+        dateOfBirth: '<dateTime()>'
+        email: '<email()>'
+    hero3:
+        name: 'Bombasto'
+        dateOfBirth: '<dateTime()>'
+        email: '<email()>'
+    hero4:
+        name: 'Celeritas'
+        dateOfBirth: '<dateTime()>'
+        email: '<email()>'
+    hero5:
+        name: 'Magneta'
+        dateOfBirth: '<dateTime()>'
+        email: '<email()>'
+    hero6:
+        name: 'RubberMan'
+        dateOfBirth: '<dateTime()>'
+        email: '<email()>'
+    hero7:
+        name: 'Dynama'
+        dateOfBirth: '<dateTime()>'
+        email: '<email()>'
+    hero8:
+        name: 'Dr IQ'
+        dateOfBirth: '<dateTime()>'
+        email: '<email()>'
+    hero9:
+        name: 'Magma'
+        dateOfBirth: '<dateTime()>'
+        email: '<email()>'
+    hero10:
+        name: 'Tornado'
+        dateOfBirth: '<dateTime()>'
+        email: '<email()>'
+
+    person{1..200}:
+        name: '<username()>'
+        dateOfBirth: '<dateTime()>'
+        email: '<email()>'
+#        roles: '10%? @role_admin : @role_user'
+#        roles: '[@role_user]'

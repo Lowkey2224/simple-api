@@ -1,4 +1,9 @@
 api_platform:
+    collection:
+        pagination:
+            items_per_page: 20
+            client_items_per_page: true # Disabled by default
+            items_per_page_parameter_name: itemsPerPage # Default value
     mapping:
         paths: ['%kernel.project_dir%/src/Entity']
     formats:
@@ -10,6 +15,9 @@ api_platform:
             mime_types: ['text/html']
         xml:
             mime_types: ['application/xml']
+    swagger:
+         api_keys:
+             - { name: 'Authorization', type: 'header' }
 nelmio_cors:
          defaults:
              allow_credentials: false

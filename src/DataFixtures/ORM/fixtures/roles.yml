@@ -1,0 +1,9 @@
+App\Entity\Role:
+    role_superadmin:
+        name: Superadmin
+    role_admin:
+        name: Admin
+    role_moderator:
+        name: Moderator
+    role_user:
+        name: User
